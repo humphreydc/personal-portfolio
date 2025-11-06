@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer components {
+    .card-border {
+        @apply border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-[#1A1A1A] rounded-2xl p-4
+    }
+}
