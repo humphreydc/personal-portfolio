@@ -4,6 +4,14 @@
 
 @layer components {
     .card-border {
-        @apply border-2 border-gray-200 dark:border-gray-600 bg-white dark:bg-[#1A1A1A] rounded-2xl p-4
+        @apply border border-gray-200 hover:border-gray-300 dark:border-gray-400 hover:dark:border-gray-300 bg-white dark:bg-[#202020] rounded-2xl p-4
+    }
+
+    .tech-stack {
+        @apply dark:bg-[#222222] px-2 py-1 text-xs rounded-lg hover:-translate-y-0.5 transition-transform duration-200 ease-in-out border border-gray-200 dark:border-gray-400 dark:text-white
+    }
+
+    .tech-used {
+        @apply text-[10px] font-semibold dark:text-white bg-gray-200 dark:bg-gray-600 py-0.5 px-1 rounded-sm
     }
 }
