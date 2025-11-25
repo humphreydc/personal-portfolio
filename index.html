@@ -3,21 +3,21 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="public/icon1.jpg" type="image/x-icon">
+    <link rel="icon" href="public/icon.jpg" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/styles/style.css">
     <title>Humphrey DC</title>
   </head>
-  <body class="font-['Inter'] flex justify-center dark:bg-[#181818] dark:text-white bg-[radial-gradient(circle,#0046FF_0.25px,transparent_1px)] dark:bg-[linear-gradient(#251d2a_1px,transparent_1px),linear-gradient(90deg,#251d2a_1px,transparent_1px)] bg-center bg-size-[47px_47px]">
+  <body class="font-['Inter'] flex justify-center dark:bg-[#181818] dark:text-white bg-[radial-gradient(circle,#4D7FFF_0.25px,transparent_1px)] dark:bg-[linear-gradient(#251d2a_1px,transparent_1px),linear-gradient(90deg,#251d2a_1px,transparent_1px)] bg-center bg-size-[47px_47px]">
     
     <div class="flex justify-center flex-col w-[95%] max-w-[855px]">
 
       <!-- header section -->
       <header class="flex justify-between items-start w-full my-4 sm:my-8">
         <div class="flex gap-3 sm:gap-6">
-          <img class="w-24 sm:w-28 aspect-9/10 object-cover rounded-xl" src="public/profile.jpg" alt="profile picture">
+          <img class="w-24 sm:w-28 aspect-9/10 object-cover rounded-xl" src="src/assets/images/profile.jpg" alt="profile picture">
           <div class="flex flex-col justify-center gap-1.5 sm:gap-2">
             <h1 class="text-lg sm:text-2xl font-bold">Humphrey Del Castillo</h1>
             <p class="text-xs sm:text-sm opacity-80">Quezon City, Philippines</p>
@@ -60,10 +60,15 @@
         </div>
 
         <!-- dark mode -->
-        <button class="w-12 bg-gray-100 dark:bg-[#121212] border-2 border-gray-300 dark:border-gray-600 
-        rounded-full p-0.5 cursor-pointer" 
+        <button class="cursor-pointer" 
         id="dark-mode-toggle" type="button">
-        <div class="w-5 h-5 bg-gray-500 rounded-full transition duration-300" id="circle"></div></button>
+        <svg class="w-8 h-8" id="moonIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 56">
+          <path fill="currentColor" d="M31.316 14.887c.282 0 .446-.188.492-.446c.727-3.89.704-3.984 4.758-4.78c.281-.048.446-.188.446-.47c0-.304-.165-.445-.446-.492c-4.054-.82-4.03-.89-4.758-4.781c-.046-.258-.21-.445-.492-.445c-.28 0-.422.187-.468.445c-.75 3.89-.704 3.96-4.782 4.781c-.258.047-.445.188-.445.492c0 .282.188.422.445.47c4.102.796 4.032.89 4.782 4.78c.046.258.187.446.468.446M42.543 30.73c.422 0 .726-.304.773-.75c.774-6.304 1.031-6.398 7.43-7.453c.516-.093.82-.328.82-.797c0-.445-.304-.726-.726-.796c-6.493-1.102-6.75-1.149-7.524-7.454c-.047-.445-.351-.75-.773-.75c-.446 0-.75.305-.797.727c-.82 6.305-1.008 6.375-7.523 7.477c-.422.07-.727.351-.727.796c0 .446.305.704.727.797c6.515 1.055 6.75 1.149 7.523 7.5a.775.775 0 0 0 .797.703M24.918 52.528c8.578 0 15.516-4.312 18.68-11.648c.421-1.008.28-1.781-.164-2.25c-.422-.398-1.125-.492-1.97-.164c-1.757.703-3.913 1.101-6.609 1.101c-10.476 0-17.226-6.539-17.226-16.828c0-2.836.539-5.648 1.265-7.125c.47-.937.422-1.734.024-2.226c-.445-.516-1.242-.68-2.344-.235c-7.195 2.93-12.14 10.43-12.14 19.196c0 11.414 8.39 20.18 20.484 20.18m.047-3.562c-10.008 0-16.969-7.29-16.969-16.899c0-5.906 2.742-11.109 7.102-14.437c-.563 1.523-.891 3.867-.891 6.117c0 11.531 7.969 19.266 19.758 19.266c2.11 0 4.031-.258 5.015-.61c-2.93 4.055-8.156 6.563-14.015 6.563"/>
+        </svg>
+        <svg class="w-8 h-8 hidden" id="sunIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+          <path fill="currentColor" d="M8 11a3 3 0 1 1 0-6a3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8a4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
+        </svg>
+        </button>
       </header>
 
       <!-- main section -->
@@ -82,7 +87,7 @@
                 <span class="text-xs border border-gray-200 dark:border-gray-400 rounded-sm self-start px-1 py-0.5">2024 - present</span>
               </div>
               <div class="flex flex-col gap-1">
-                <h4 class="font-bold text-sm">IT Support</h4>
+                <h4 class="font-bold text-sm">Tech Support</h4>
                 <p class="text-xs opacity-80">DelCas Consumer Goods Trading</p>
                 <span class="text-xs border border-gray-200 dark:border-gray-400 rounded-sm self-start px-1 py-0.5">2022 - 2024</span>
               </div>
@@ -92,7 +97,6 @@
                 <span class="text-xs border border-gray-200 dark:border-gray-400 rounded-sm self-start px-1 py-0.5">2021 - 2022</span>
               </div>
             </div>
-            
         </section>
 
         <!-- About section -->
@@ -119,17 +123,17 @@
               <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
             </svg>Tech Stack</h3>
           <div class="flex flex-wrap gap-2 text-black">
-            <span class="tech-stack ">HTML</span>
+            <span class="tech-stack">HTML</span>
             <span class="tech-stack">CSS</span>
-            <span class="tech-stack ">JavaScript</span>
-            <span class="tech-stack ">Tailwind CSS</span>
-            <span class="tech-stack ">Vite</span>
-            <span class="tech-stack ">MySQL</span>
-            <span class="tech-stack ">Java</span>
-            <span class="tech-stack ">Figma</span>
-            <span class="tech-stack ">VS Code</span>
-            <span class="tech-stack ">Git</span>
-            <span class="tech-stack ">GitHub</span>
+            <span class="tech-stack">JavaScript</span>
+            <span class="tech-stack">Tailwind CSS</span>
+            <span class="tech-stack">Vite</span>
+            <span class="tech-stack">MySQL</span>
+            <span class="tech-stack">Java</span>
+            <span class="tech-stack">Figma</span>
+            <span class="tech-stack">VS Code</span>
+            <span class="tech-stack">Git</span>
+            <span class="tech-stack">GitHub</span>
           </div>
         </section>
 
@@ -145,7 +149,7 @@
             <div class="flex flex-col justify-center gap-2 dark:text-white">
 
               <!-- first project -->
-              <div class="bg-white dark:bg-[#222222] border border-gray-200 dark:border-gray-400 rounded-xl p-3">
+              <div class="bg-white dark:bg-[#222222] border border-gray-200 dark:border-gray-400 dark:hover:bg-[#262626] rounded-xl p-3">
                 <h4 class="text-sm font-bold mb-1">To-Do-List App</h4>
                 <p class="text-xs">Web based to-do-list app that adds, edit, and delete 
                   task by the user, saved locally on the browser.</p>
@@ -161,7 +165,7 @@
               </div>
 
               <!-- second project -->
-              <div class="bg-white dark:bg-[#222222] border border-gray-200 dark:border-gray-400 rounded-xl p-3">
+              <div class="bg-white dark:bg-[#222222] border border-gray-200 dark:border-gray-400 dark:hover:bg-[#262626] rounded-xl p-3">
                 <h4 class="text-sm font-bold mb-1">Hotdog Builder</h4>
                 <p class="text-xs">Interactive hotdog builder, create and customize your own hotdog with buns and toppings.</p>
                 <div class="flex flex-wrap gap-1 my-3">
@@ -200,21 +204,48 @@
                 <path fill="currentColor" d="M10.586 2.1a2 2 0 0 1 2.7-.116l.128.117L15.314 4H18a2 2 0 0 1 1.994 1.85L20 6v2.686l1.9 1.9a2 2 0 0 1 .116 2.701l-.117.127l-1.9 1.9V18a2 2 0 0 1-1.85 1.995L18 20h-2.685l-1.9 1.9a2 2 0 0 1-2.701.116l-.127-.116l-1.9-1.9H6a2 2 0 0 1-1.995-1.85L4 18v-2.686l-1.9-1.9a2 2 0 0 1-.116-2.701l.116-.127l1.9-1.9V6a2 2 0 0 1 1.85-1.994L6 4h2.686zM12 3.516l-1.9 1.9a2 2 0 0 1-1.238.577L8.686 6H6v2.686a2 2 0 0 1-.467 1.285l-.119.13l-1.9 1.9l1.9 1.899a2 2 0 0 1 .578 1.238l.008.176V18h2.686a2 2 0 0 1 1.285.467l.13.119l1.899 1.9l1.9-1.9a2 2 0 0 1 1.238-.578l.176-.008H18v-2.686a2 2 0 0 1 .467-1.285l.119-.13l1.9-1.899l-1.9-1.9a2 2 0 0 1-.578-1.238L18 8.686V6h-2.686a2 2 0 0 1-1.285-.467l-.13-.119l-1.9-1.9Zm3.08 5.468a1 1 0 0 1 1.497 1.32l-.084.094l-4.88 4.88a1.1 1.1 0 0 1-1.46.086l-.096-.085l-2.404-2.404a1 1 0 0 1 1.32-1.498l.094.083l1.768 1.768z"/>
               </svg>Certifications</h3>
             <div class="flex flex-col justify-center gap-2 dark:text-white">
-              <div class="border border-gray-200 dark:border-gray-400 rounded-xl py-2 px-3 cursor-pointer bg-white dark:bg-[#222222] hover:bg-gray-100 dark:hover:bg-gray-600">
+
+              <!-- first certificate -->
+              <div class="border border-gray-200 dark:border-gray-400 rounded-xl py-2 px-3 cursor-pointer 
+              bg-white dark:bg-[#222222] hover:bg-gray-100 dark:hover:bg-gray-600"
+              id="openCertificate1">
                 <h4 class="text-sm font-bold mb-1">Responsive Web Design</h4>
                 <p class="text-gray-600 text-xs dark:text-gray-300">freeCodeCamp</p>
               </div>
-              <div class="border border-gray-200 dark:border-gray-400 rounded-xl py-2 px-3 cursor-pointer bg-white dark:bg-[#222222] hover:bg-gray-100 dark:hover:bg-gray-600">
+              
+              <!-- dialog 1 -->
+              <dialog class="max-w-3xl w-[95%] border border-gray-200 rounded-lg p-2 sm:p-4 m-auto" id="responsive-web-design-modal">
+                <div class="flex justify-end mb-2">
+                  <button class="cursor-pointer" id="responsive-web-design-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
+                      <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M20 20L4 4m16 0L4 20"/>
+                    </svg>
+                  </button>
+                </div>
+                <img src="src/assets/images/responsive-web-design-certificate.png" alt="responsive web design certificate">
+              </dialog>
+
+              <!-- second certificate -->
+              <div class="border border-gray-200 dark:border-gray-400 rounded-xl py-2 px-3 cursor-pointer 
+              bg-white dark:bg-[#222222] hover:bg-gray-100 dark:hover:bg-gray-600"
+              id="openCertificate2">
                 <h4 class="text-sm font-bold mb-1">Backend Development and APIs</h4>
                 <p class="text-gray-600 text-xs dark:text-gray-300">freeCodeCamp</p>
               </div>
+
+              <!-- diaglog 2 -->
+              <dialog id="backend-apis-modal">
+                <button id="backend-apis-close">Close</button>
+                <p>This modal dialog has a groovy backdrop!</p>
+              </dialog>
             </div>
           </section>
 
           <!-- Contact section -->
           <section class="card-border">
             <h3 class="font-bold"></h3>
-            
+            <p class="text-sm">Email: humphreydelcastillo6@gmail.com</p>
+            <p class="text-sm">Instagram: humpri_dc</p>
           </section>
         </div>
       </main>
