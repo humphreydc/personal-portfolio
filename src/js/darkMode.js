@@ -35,4 +35,3 @@ darkMode.addEventListener('click', () => {
         updateIcons(true);
     }
 });
-
