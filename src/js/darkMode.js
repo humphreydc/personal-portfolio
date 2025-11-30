@@ -28,7 +28,6 @@ darkMode.addEventListener('click', () => {
         document.documentElement.classList.remove('dark');
         localStorage.theme = 'light';
         updateIcons(false);
-        
     } else {
         document.documentElement.classList.add('dark');
         localStorage.theme = 'dark';

@@ -10,8 +10,8 @@
 }
 
 ::backdrop {
-  background: gray;
-  opacity: 0.25;
+    background: #242424;
+    opacity: 0.25;
 }
 
 @layer components {
@@ -24,7 +24,29 @@
     }
 
     .tech-used {
-        @apply text-[10px] font-semibold dark:text-white bg-gray-200 dark:bg-gray-600 py-0.5 px-1 rounded-sm
+        @apply text-[10px] font-semibold dark:text-white bg-gray-200 dark:bg-gray-700 py-0.5 px-1 rounded-sm
+    }
+
+    .carousel {
+        @apply max-h-full w-full shrink-0 py-0 px-1
+    }
+
+    .indicator.active {
+        @apply bg-(--bg-dark-color) dark:bg-white
     }
 }
 
+/* no tailwind for this */
+#wrapper {
+    scrollbar-width: none;
+}
+
+.carousel {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+.indicator {
+    cursor: pointer;
+    transition: all 0.3s;
+}
